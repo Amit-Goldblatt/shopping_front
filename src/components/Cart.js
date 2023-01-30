@@ -1,11 +1,12 @@
 import CartProduct from "./CartProduct"
 
+
 function Cart({cart}) {
     
     return (
         <div>
             
-            {cart.map(cartproduct => <CartProduct key={cart[0]["id"]} cartproduct={cartproduct} />)}
+            {cart.map(cartproduct => <CartProduct key={cartproduct.id} cartproduct={cartproduct} />)}
 
         </div>
     )

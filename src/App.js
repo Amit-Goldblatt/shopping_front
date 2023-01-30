@@ -1,8 +1,28 @@
+import './App.css';
 import { useEffect, useState } from "react";
 import Products from "./components/Products";
 import{BrowserRouter, Route, Routes, Link} from "react-router-dom";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
+import axios from "axios";
+import { setSession } from 'next-auth-client';
+import HeroBanner from './components/HeroBanner';
+import FooterBanner from './components/FooterBanner';
+function login(user, pass) {
+    axios.post('http://localhost:8000/login/', {
+        username: user,
+        password: pass,
+    })
+        .then(response => {
+            console.log(response.data);
+            setSession(response.data.session)
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
+
+
 function App() {
     const [products, setProducts] = useState([])
     useEffect(() => {
@@ -11,6 +31,8 @@ function App() {
             .then((data) => {
                 // console.log(data)
                 setProducts(data)
+
+
             });
        
     }, [])
@@ -27,19 +49,24 @@ function App() {
 
   return (
     <div className="App">
-        <h1>My Cart Front end</h1>
+        
 
 		<BrowserRouter>
-			<Header></Header>
+
 			<Routes>
-				<Route path="/" element={ 
-        			<Products products={products}/>} />
+				<Route path="/" element={
+                    <> 
+                    <HeroBanner products={products}/>
+        			<Products products={products}/>
+                    </>
+                    }
+                     />
 				<Route path="/cart" element={
 					<Cart cart={cart}/>} />
 				
 			</Routes>
 		</BrowserRouter>
-
+        <FooterBanner/>
     </div>
   );
 }
