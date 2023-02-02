@@ -1,7 +1,7 @@
 // create a url based on environment
 let BaseUrl = '';
 
-if (process.env._ && process.env._.indexOf("heroku") !== -1){
+if (window.location.href.includes('herokuapp.com')){
 console.log("heroku")
 
 BaseUrl = 'https://backshoping.herokuapp.com/';
