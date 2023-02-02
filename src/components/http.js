@@ -4,7 +4,7 @@ let BaseUrl = '';
 if (window.location.href.includes('herokuapp.com')){
 console.log("heroku")
 
-BaseUrl = 'https://backshoping.herokuapp.com/';
+BaseUrl = 'https://backshoping.herokuapp.com';
 }
 else 
 {
