@@ -8,8 +8,9 @@ import axios from "axios";
 import { setSession } from 'next-auth-client';
 import HeroBanner from './components/HeroBanner';
 import FooterBanner from './components/FooterBanner';
+import { BaseUrl } from './components/http';
 function login(user, pass) {
-    axios.post('http://localhost:8000/login/', {
+    axios.post(BaseUrl+'/login/', {
         username: user,
         password: pass,
     })
@@ -26,7 +27,7 @@ function login(user, pass) {
 function App() {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch("http://localhost:8000/product/")
+        fetch(BaseUrl +"/product/")
             .then((response) => response.json())
             .then((data) => {
                 // console.log(data)
@@ -38,7 +39,7 @@ function App() {
     }, [])
 	const [cart, setCart] = useState([])
 	useEffect(() => {
-        fetch("http://localhost:8000/cart/")
+        fetch(BaseUrl+"/cart/")
             .then((response) => response.json())
             .then((data) => {
                 
