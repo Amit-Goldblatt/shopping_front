@@ -27,6 +27,7 @@ function login(user, pass) {
 function App() {
     const [products, setProducts] = useState([])
     useEffect(() => {
+        console.log(BaseUrl)
         fetch(BaseUrl +"/product/")
             .then((response) => response.json())
             .then((data) => {
