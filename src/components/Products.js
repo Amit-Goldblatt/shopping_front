@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap"
+
 import Product from "./Product"
 
 function Products({products}) {

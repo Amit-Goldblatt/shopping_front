@@ -21,15 +21,15 @@ function ImgUrl(id, products){
     }
 }
 
-function Description(id, products){
-    let product = FindProduct(id, products);
-    if (product === null) {
-        return 'Loading...';
-    }
-    else{
-        return product.description;
-    }
-}
+// function Description(id, products){
+//     let product = FindProduct(id, products);
+//     if (product === null) {
+//         return 'Loading...';
+//     }
+//     else{
+//         return product.description;
+//     }
+// }
 
 function Name (id, products){
     let product = FindProduct(id, products);

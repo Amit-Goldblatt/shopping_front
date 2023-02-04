@@ -1,29 +1,29 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import Products from "./components/Products";
-import{BrowserRouter, Route, Routes, Link} from "react-router-dom";
+import{BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
-import axios from "axios";
-import { setSession } from 'next-auth-client';
+
+// import { setSession } from 'next-auth-client';
 import HeroBanner from './components/HeroBanner';
 import FooterBanner from './components/FooterBanner';
 import { BaseUrl } from './components/http';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function login(user, pass) {
-    axios.post(BaseUrl+'/login/', {
-        username: user,
-        password: pass,
-    })
-        .then(response => {
-            console.log(response.data);
-            setSession(response.data.session)
-        })
-        .catch(error => {
-            console.log(error);
-        });
-}
+// function login(user, pass) {
+//     axios.post(BaseUrl+'/login/', {
+//         username: user,
+//         password: pass,
+//     })
+//         .then(response => {
+//             console.log(response.data);
+//             setSession(response.data.session)
+//         })
+//         .catch(error => {
+//             console.log(error);
+//         });
+// }
 
 
 function App() {
