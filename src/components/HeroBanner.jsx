@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { BaseUrl } from './http'
+import Button from 'react-bootstrap/Button';
 function FindProduct(id, products){
     if (products.products.length === 0) {
         return null;
@@ -45,23 +46,26 @@ function HeroBanner(products) {
 
   return (
     
-    <div className='hero-banner-container'>
-        <div>
-            <h3>Featured Product</h3>
-            <h1>{Name(ProductId, products)}</h1>
+
+    <div style={{ display: "table", width:"100%"}} className='hero-banner-container'>
+        
+            <h3 >Featured Product</h3>
+            <h1 >{Name(ProductId, products)}</h1>
+
+            <div >
             <img className='hero-banner-image' src={ImgUrl(ProductId, products)} alt='headphons'></img>
             
-        </div>
-        <div>
-            <Link to = '/product/id'>
-                <button type='button'>Shop Now</button>   
-            </Link>
-            <div className='desc'>
-                <h5>description</h5>
-                <p>{Description(ProductId, products)}</p>
             </div>
-        </div>
+        
+            <Link to = '/product/id'>
+            <Button variant="primary">buy now</Button>{' '}
+        </Link>
+       
+        
+       
     </div>
+
+    
   )
 }
 

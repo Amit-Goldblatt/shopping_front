@@ -1,10 +1,13 @@
+import { Card } from "react-bootstrap"
 import Product from "./Product"
 
 function Products({products}) {
    
     return (
         <div className="products-container">
+            
             {products.map(product => <Product key={product.id} product={product} />)}
+            
         </div>
     )
 }

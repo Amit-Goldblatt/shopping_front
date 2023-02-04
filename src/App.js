@@ -9,6 +9,8 @@ import { setSession } from 'next-auth-client';
 import HeroBanner from './components/HeroBanner';
 import FooterBanner from './components/FooterBanner';
 import { BaseUrl } from './components/http';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function login(user, pass) {
     axios.post(BaseUrl+'/login/', {
         username: user,
@@ -51,10 +53,10 @@ function App() {
 
   return (
     <div className="App">
-        
+        <Header/>
 
 		<BrowserRouter>
-
+           
 			<Routes>
 				<Route path="/" element={
                     <> 

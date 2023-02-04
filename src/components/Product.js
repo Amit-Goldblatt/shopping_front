@@ -1,13 +1,27 @@
 import { BaseUrl } from "./http"
+import { Card, Button } from 'react-bootstrap';
 function Product(product) {
   return (
 
     <div>
-        <h1>{product.product.name}</h1>
-        <p>{product.product.description}</p>
-        <p>{product.product.price}</p>
+      <Card style={{ width: '18rem' , height:'30rem' }}>
+      <Card.Img variant="top" src={BaseUrl+'/static'+product.product.image} alt={product.name} />
+      <Card.Body style={{ textAlign: "center" }}>
+        <Card.Title style={{textAlign:"center"}}>
+          {product.product.name}</Card.Title>
+        {/* <Card.Text>
+        {product.product.description}
+        <br></br>
+        </Card.Text> */}
+  
+        <Button variant="secondary" style={{ position: "absolute", right:"25%", bottom:"0" }}>
+  add to cart {product.product.price}$
+</Button>
+
+      </Card.Body>
+    </Card>
         
-        <img src={BaseUrl+'/static'+product.product.image} alt={product.name}/>
+        
     </div>
   )
 }
