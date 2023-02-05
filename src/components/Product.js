@@ -1,5 +1,6 @@
 import { BaseUrl } from "./http"
-import { Card, Button } from 'react-bootstrap';
+import Card  from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 function Product(product) {
   return (
 

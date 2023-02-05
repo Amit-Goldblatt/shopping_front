@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
-import { Navbar, Container,Nav, NavDropdown } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import '../App.css'
 
 function Header() {
   return (
-    <Navbar className="neo-brutalist-navbar" expand="lg"  >
+    <Navbar className="neo-brutalist-navbar" expand="lg" fixed="top"  >
       <Container>
         <Navbar.Brand className="neo-brutalist-brand" href="#home">Neo Brutalist</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          {/* aign items left */}
           <Nav className="neo-brutalist-nav">
             <Nav.Link className="neo-brutalist-link" href="#features">Features</Nav.Link>
             <Nav.Link className="neo-brutalist-link" href="#pricing">Pricing</Nav.Link>

@@ -9,7 +9,7 @@ import Cart from "./components/Cart";
 import HeroBanner from './components/HeroBanner';
 import FooterBanner from './components/FooterBanner';
 import { BaseUrl } from './components/http';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // function login(user, pass) {
 //     axios.post(BaseUrl+'/login/', {
