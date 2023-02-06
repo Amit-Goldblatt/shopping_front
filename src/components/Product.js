@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 function Product(product) {
   return (
 
-    <div>
-      <Card style={{ width: '18rem' , height:'30rem' }}>
+    <div className="products-container">
+      <Card className="product-card">
       <Card.Img variant="top" src={BaseUrl+'/static'+product.product.image} alt={product.name} />
       <Card.Body style={{ textAlign: "center" }}>
         <Card.Title style={{textAlign:"center"}}>

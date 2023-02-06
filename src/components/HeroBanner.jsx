@@ -49,7 +49,7 @@ function HeroBanner(products) {
 
     <div style={{ display: "table", width:"100%"}} className='hero-banner-container'>
         
-            <h3 >Featured Product</h3>
+            <h3>Featured Product</h3>
             <h1 >{Name(ProductId, products)}</h1>
 
             <div >
@@ -61,7 +61,7 @@ function HeroBanner(products) {
             <Button variant="primary">buy now</Button>{' '}
         </Link>
        
-        
+       
        
     </div>
 

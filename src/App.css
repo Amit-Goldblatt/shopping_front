@@ -1,8 +1,21 @@
+body {
+  padding-top: 60px;
+  background-color: rgb(168, 225, 168) ;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 40px;
+  }
+
+}
+
+
 .neo-brutalist-navbar {
   background-color: rgb(247, 135, 255);
   border: 1px solid #000;
   border-radius: 20px;
   box-shadow: 5px 5px;
+
   /* width: 140% !important; */
   
 }
@@ -11,12 +24,15 @@
   font-size: 22px;
   font-weight: bold;
   color: rgb(0, 0, 0);
+
 }
 
 .neo-brutalist-nav {
   display: flex;
   align-items: center;
   justify-content: center;
+
+ 
 }
 
 .neo-brutalist-link .navbar-nav .nav-link{
@@ -78,10 +94,11 @@
   
 }
 .btn-primary {
-  color: #000 !important;
-  background-color:aqua!important;
-  font-weight: bold !important;
-  border: 1px solid #000 !important;
+  color: #000 ;
+  background-color:aqua;
+  font-weight: bold ;
+  font-size: larger;
+  border: 2px solid #000 ;
   box-shadow: 5px 5px;
   margin-bottom: 10px;
 }
@@ -101,8 +118,55 @@ h1 {
 
 h3 {
   font-size: 2em !important;
-  line-height: 1.5 !important;
+  
+  padding-top: 1rem;
+  
 }
 .hero-banner-container img {
   margin-bottom: 10px;
+  
 }
+/* prduct + products */
+.product-card{
+  border: 1px solid #000;
+  border-radius: 20px;
+  box-shadow: 5px 5px;
+ background-color:  rgb(256,252,176);
+  margin: 10px;
+  padding: 10px;
+  width: 18rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.product-card img {
+ 
+  border-radius: 20px;
+  border: 4px solid #000;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.products-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.products-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+}
+
+.products-container .col {
+  display: inline-block;
+  text-align: center;
+}
+
+
+

@@ -3,13 +3,23 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import bird2 from '../assets/bird2.png';
 import '../App.css'
 
 function Header() {
   return (
-    <Navbar className="neo-brutalist-navbar" expand="lg" fixed="top"  >
+    <Navbar className="neo-brutalist-navbar" expand="lg" fixed="top" style={{padding:"0px"}} >
       <Container>
-        <Navbar.Brand className="neo-brutalist-brand" href="#home">Neo Brutalist</Navbar.Brand>
+      <Navbar.Brand href="#home" style={{paddingBottom:"0px", paddingTop:"0px"}}>
+      <img
+              src={bird2}
+              width="50"
+              height="50"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+              
+            />
+          </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="neo-brutalist-nav">
