@@ -10,6 +10,10 @@ function CartProduct({ cartproduct, onRemoveProduct }) {
   const handleDecrease = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
+      axios.put(BaseUrl + '/cart/' + cartproduct.product.id + "/", {
+        product: cartproduct.product.id,
+        quantity: quantity - 1,
+      })
     }
   };
 
@@ -39,7 +43,7 @@ function CartProduct({ cartproduct, onRemoveProduct }) {
         <p>{cartproduct.product.price}$</p>
         <div className="quantity">
           <Button className="quantity-button" onClick={handleDecrease}>-</Button>
-          <span style={{ marginLeft: "6px" }}>{quantity}</span>
+          <h3 style={{ marginLeft: "6px" }}>{quantity}</h3>
           <Button className="quantity-button" onClick={handleIncrease}>+</Button>
         </div>
         <br />

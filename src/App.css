@@ -210,8 +210,7 @@ h3 {
  background-color:  rgb(256,252,176);
   margin: 10px;
   padding: 10px;
-  min-width: 300px;
-  min-height: 600px;
+
   height: auto;
   display: flex;
   flex-direction: row;

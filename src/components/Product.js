@@ -1,7 +1,21 @@
 import { BaseUrl } from "./http"
 import Card  from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
 function Product(product) {
+  const handleAddProduct = () => {
+    axios.post(BaseUrl + '/cart/', {
+      product: product.product.id,
+      quantity: 1,
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
 
     <div className="products-container">
@@ -12,7 +26,7 @@ function Product(product) {
           {product.product.name}</Card.Title>
      
   
-        <Button variant="mt-auto">
+        <Button variant="mt-auto" onClick={handleAddProduct}>
   add to cart {product.product.price}$
 </Button>
 
