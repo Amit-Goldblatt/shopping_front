@@ -1,6 +1,7 @@
 body {
   padding-top: 60px;
   background-color: rgb(168, 225, 168) ;
+  
 }
 @media (max-width: 979px) {
   body {
@@ -27,13 +28,7 @@ body {
 
 }
 
-.neo-brutalist-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
- 
-}
 
 .neo-brutalist-link .navbar-nav .nav-link{
   font-size: 18px;
@@ -41,7 +36,34 @@ body {
   margin: 0 15px;
   text-decoration: none;
 }
+.neo-brutalist-nav.neo-brutalist-right {
+  justify-content: flex-end !important;
+}
+.neo-brutalist-navbar {
+  background-color: rgb(247, 135, 255);
+  border: 1px solid #000;
+  border-radius: 20px;
+  box-shadow: 5px 5px;
 
+  /* width: 140% !important; */
+  
+}
+
+.neo-brutalist-brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+
+}
+
+
+
+.neo-brutalist-link .navbar-nav .nav-link{
+  font-size: 18px;
+  color: rgb(0, 0, 0) !important;
+  margin: 0 15px;
+  text-decoration: none;
+}
 .neo-brutalist-dropdown .dropdown-toggle {
   color: rgb(0, 0, 0);
 }
@@ -101,19 +123,27 @@ body {
   border: 2px solid #000 ;
   box-shadow: 5px 5px;
   margin-bottom: 10px;
+  
 }
-.btn-secondary {
+.card-body .btn {
   color: #000 !important;
   background-color: rgb(247, 135, 255) !important;
   font-weight: bold !important;
   border: 1px solid #000 !important;
   box-shadow: 5px 5px;
   margin-bottom: 10px;
+  align-self: bottom;
+  
+  
+}
+.card-body{
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 h1 {
-  font-size: 4.25em !important;
-  line-height: 1.5 !important;
+  font-size: 4.25em ;
+  line-height: 1.5 ;
 }
 
 h3 {
@@ -134,8 +164,9 @@ h3 {
  background-color:  rgb(256,252,176);
   margin: 10px;
   padding: 10px;
-  width: 18rem;
-  height: 30rem;
+  min-width: 300px;
+  min-height: 600px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,7 +179,11 @@ h3 {
   border-radius: 20px;
   border: 4px solid #000;
   background-color: white;
-  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  align-self: center;
+
+ 
 }
 
 .products-container {
@@ -167,6 +202,70 @@ h3 {
   display: inline-block;
   text-align: center;
 }
+/* cart */
+.cart-product {
+  border: 1px solid #000;
+  border-radius: 20px;
+  box-shadow: 5px 5px;
+ background-color:  rgb(256,252,176);
+  margin: 10px;
+  padding: 10px;
+  min-width: 300px;
+  min-height: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: first baseline;
+  text-align: center;
+}
+.cart-product h1{
+  font-size: 2em;
+  line-height: 1.5 ;
+;
+}
+.cart-product img {
+  border-radius: 20px;
+  border: 4px solid #000;
+  background-color: white;
+  width: 20%;
+  height: auto;
+  
+}
+.cart-product p{
+  font-size: 1.2em;
+  line-height: 1.5 ;
+  padding-top: 1rem;
+}
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: rgb(168, 225, 168);
+}
 
+.cart-product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 16px;
+  width: 100%;
+}
 
+.quantity {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 8px;
+}
 
+.quantity-button {
+  background-color:rgb(247, 135, 255);
+}
+
+.remove-button {
+  background-color:rgb(203, 196, 203);
+}

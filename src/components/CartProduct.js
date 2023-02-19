@@ -1,21 +1,52 @@
-import { BaseUrl } from "./http"
 
+import { useState } from 'react';
+import { BaseUrl } from "./http";
+import axios from 'axios';
+import { Button } from 'react-bootstrap';
 
-function CartProduct(cartproduct) {
+function CartProduct({ cartproduct, onRemoveProduct }) {
+  const [quantity, setQuantity] = useState(cartproduct.quantity);
 
-  return  (
-       <div>
-  <h1>{cartproduct.cartproduct.product.name}</h1>
-  <p>{cartproduct.cartproduct.product.description}</p>
-  <p>{cartproduct.cartproduct.product.price}</p>
-  <p>{cartproduct.cartproduct.quantity}</p>
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
-{/* <h1>{cartproduct.cartproduct}</h1> */}
-  {/* <p>{cartdes.price}</p>
-  <p>{cartproduct.cartproduct.quantity}</p> */}
-  <img src={BaseUrl+'/static'+cartproduct.cartproduct.product.image} alt={cartproduct.cartproduct.product.name}/>
-</div>
-)
+  const handleIncrease = () => {
+    setQuantity(quantity + 1);
+    axios.put(BaseUrl + '/cart/' + cartproduct.product.id + "/", {
+      product: cartproduct.product.id,
+      quantity: quantity + 1,
+    })
+  };
+
+  const handleRemoveProduct = () => {
+    axios.delete(BaseUrl + '/cart/' + cartproduct.id + "/")
+      .then(() => {
+        onRemoveProduct(cartproduct.product.id);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  return (
+    <div className="cart-product">
+      <img src={BaseUrl + '/static' + cartproduct.product.image} alt={cartproduct.product.name} />
+      <div className="cart-product-details">
+        <h1>{cartproduct.product.name}</h1>
+        <p>{cartproduct.product.price}$</p>
+        <div className="quantity">
+          <Button className="quantity-button" onClick={handleDecrease}>-</Button>
+          <span style={{ marginLeft: "6px" }}>{quantity}</span>
+          <Button className="quantity-button" onClick={handleIncrease}>+</Button>
+        </div>
+        <br />
+        <Button className="remove-button" onClick={handleRemoveProduct}>Remove</Button>
+      </div>
+    </div>
+  );
 }
 
-export default CartProduct
+export default CartProduct;

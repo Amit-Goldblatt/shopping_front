@@ -7,19 +7,17 @@ function Product(product) {
     <div className="products-container">
       <Card className="product-card">
       <Card.Img variant="top" src={BaseUrl+'/static'+product.product.image} alt={product.name} />
-      <Card.Body style={{ textAlign: "center" }}>
+      <Card.Body className="d-flex" style={{ textAlign: "center" }}>
         <Card.Title style={{textAlign:"center"}}>
           {product.product.name}</Card.Title>
-        {/* <Card.Text>
-        {product.product.description}
-        <br></br>
-        </Card.Text> */}
+     
   
-        <Button variant="secondary" style={{ position: "absolute", right:"25%", bottom:"0" }}>
+        <Button variant="mt-auto">
   add to cart {product.product.price}$
 </Button>
 
       </Card.Body>
+      
     </Card>
         
         

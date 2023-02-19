@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import Products from "./components/Products";
-import{BrowserRouter, Route, Routes} from "react-router-dom";
+import{BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
 
@@ -53,10 +53,10 @@ function App() {
 
   return (
     <div className="App">
-        <Header/>
+        
 
 		<BrowserRouter>
-           
+        <Header/>
 			<Routes>
 				<Route path="/" element={
                     <> 
