@@ -18,7 +18,7 @@ function Cart({ cart }) {
   
     return (
       <div className="cart-card-container">
-        <h1>Cart</h1>
+        <h1 style = {{textAlign:"center"}}>Cart</h1>
         {cartItems.map((cartproduct) => (
           <CartProduct
             key={cartproduct.id}
