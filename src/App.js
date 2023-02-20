@@ -1,14 +1,14 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import Products from "./components/Products";
-import{BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import{BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
 import About from './components/About';
 
 // import { setSession } from 'next-auth-client';
 import HeroBanner from './components/HeroBanner';
-import FooterBanner from './components/FooterBanner';
+
 import ProductDetails from './components/ProductDetails';
 import { BaseUrl } from './components/http';
 

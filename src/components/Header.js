@@ -3,7 +3,6 @@ import {LinkContainer} from 'react-router-bootstrap'
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import bird2 from '../assets/bird2.png';
 import{FaShoppingCart} from "react-icons/fa";
 import '../App.css'
