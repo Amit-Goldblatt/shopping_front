@@ -1,9 +1,7 @@
-import CartProduct from "./CartProduct"
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+import CartProduct from "./CartProduct";
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Button } from "react-bootstrap";
 function Cart({ cart }) {
     const [cartItems, setCartItems] = useState([]);
   

@@ -4,10 +4,12 @@ import Products from "./components/Products";
 import{BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
+import About from './components/About';
 
 // import { setSession } from 'next-auth-client';
 import HeroBanner from './components/HeroBanner';
 import FooterBanner from './components/FooterBanner';
+import ProductDetails from './components/ProductDetails';
 import { BaseUrl } from './components/http';
 
 
@@ -67,10 +69,14 @@ function App() {
                      />
 				<Route path="/cart" element={
 					<Cart cart={cart}/>} />
-				
+                <Route path="/product/:id" element={
+                    
+                    <ProductDetails products={products}/>} />
+                <Route path="/about" element={
+                    <About/>}/>
 			</Routes>
 		</BrowserRouter>
-        <FooterBanner/>
+        
     </div>
   );
 }

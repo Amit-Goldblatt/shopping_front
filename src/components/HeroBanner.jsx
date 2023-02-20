@@ -56,8 +56,7 @@ function HeroBanner(products) {
             <img className='hero-banner-image' src={ImgUrl(ProductId, products)} alt='headphons'></img>
             
             </div>
-        
-            <Link to = '/product/id'>
+            <Link to = {"/product/"+ProductId}  >
             <Button variant="primary">buy now</Button>{' '}
         </Link>
        

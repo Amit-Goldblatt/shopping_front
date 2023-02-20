@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { BaseUrl } from "./http";
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function CartProduct({ cartproduct, onRemoveProduct }) {
   const [quantity, setQuantity] = useState(cartproduct.quantity);
@@ -37,7 +38,9 @@ function CartProduct({ cartproduct, onRemoveProduct }) {
 
   return (
     <div className="cart-product">
+      <Link to={"/product/" + cartproduct.product.id}>
       <img src={BaseUrl + '/static' + cartproduct.product.image} alt={cartproduct.product.name} />
+      </Link>
       <div className="cart-product-details">
         <h1>{cartproduct.product.name}</h1>
         <p>{cartproduct.product.price}$</p>

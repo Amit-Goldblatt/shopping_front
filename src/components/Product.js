@@ -2,6 +2,7 @@ import { BaseUrl } from "./http"
 import Card  from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 function Product(product) {
   const handleAddProduct = () => {
     axios.post(BaseUrl + '/cart/', {
@@ -20,9 +21,11 @@ function Product(product) {
 
     <div className="products-container">
       <Card className="product-card">
-      <Card.Img variant="top" src={BaseUrl+'/static'+product.product.image} alt={product.name} />
+      <Link to = {"/product/" + product.product.id}>
+        <Card.Img variant="top" src={BaseUrl+'/static'+product.product.image} alt={product.name} />
+        </Link>
       <Card.Body className="d-flex" style={{ textAlign: "center" }}>
-        <Card.Title style={{textAlign:"center"}}>
+      <Card.Title style={{textAlign:"center"}}>
           {product.product.name}</Card.Title>
      
   
