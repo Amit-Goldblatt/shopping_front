@@ -1,14 +1,13 @@
 // create a url based on environment
 let BaseUrl = '';
 
-if (window.location.href.includes('herokuapp.com')){
+if (window.location.href.includes('herokuapp.com')) {
 
 
-BaseUrl = 'https://backshoping.herokuapp.com';
+    BaseUrl = 'https://backshoping.herokuapp.com';
 }
-else 
-{
+else {
 
-BaseUrl ='http://localhost:8000';
+    BaseUrl = 'http://localhost:8000';
 }
-export {BaseUrl}
+export { BaseUrl }

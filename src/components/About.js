@@ -1,4 +1,5 @@
 import bird2 from '../assets/bird2.png';
+// this is the about page that displays the information about the site and contact information.
 function About() {
     return (
         <div className="about">

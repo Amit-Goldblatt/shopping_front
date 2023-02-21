@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { BaseUrl } from './http'
 import Button from 'react-bootstrap/Button';
+
+
 function FindProduct(id, products){
     if (products.products.length === 0) {
         return null;
@@ -32,7 +34,7 @@ function Name (id, products){
         return product.name;
     }
 }
-
+// shows a featured product
 function HeroBanner(products) {
    let ProductId = 9;
 

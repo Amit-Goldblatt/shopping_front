@@ -7,6 +7,7 @@ import bird2 from '../assets/bird2.png';
 import{FaShoppingCart} from "react-icons/fa";
 import '../App.css'
 
+// renders the navbar
 function Header() {
   return (
     <Navbar className="neo-brutalist-navbar"  fixed="top" style={{padding:"0px"}} >
