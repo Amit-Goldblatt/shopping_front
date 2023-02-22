@@ -1,6 +1,8 @@
 body {
   padding-top: 60px;
   background-color: rgb(168, 225, 168) ;
+  overflow-x: hidden;
+  max-width: 100%;
   
 }
 @media (max-width: 979px) {
@@ -16,6 +18,8 @@ body {
   border: 1px solid #000;
   border-radius: 20px;
   box-shadow: 5px 5px;
+
+  
 
   /* width: 140% !important; */
   
@@ -86,6 +90,7 @@ body {
   border: 2px solid #000;
   box-shadow: 5px 5px;
   background-color: aqua;
+  max-width: 100%;
 
   
 }
@@ -103,7 +108,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
   text-align: center;
   background-color: rgb(168, 225, 168);
 }
@@ -150,6 +157,17 @@ h3 {
   font-size: 2em !important;
   
   padding-top: 1rem;
+  
+}
+@media (max-width: 979px)  {
+  h1 {
+    font-size: 2.25em;
+  }
+  h3 {
+    font-size: 1.5em;
+    padding-top: 2rem;
+  }
+  
   
 }
 .hero-banner-container img {
@@ -311,4 +329,18 @@ h3 {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+}
+
+.about img {
+
+  width: 30%;
+  height: auto;
+  margin: 10px;
+  
+}
+
+@media (max-width: 979px) {
+  .about h1{
+    padding-top: 2rem;
+  }
 }
