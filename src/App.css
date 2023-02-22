@@ -346,4 +346,7 @@ h3 {
   .cart-card-container h1 {
     padding-top: 2rem;
   }
+  .cart-product img {
+    width: 100%;
+  }
 }
