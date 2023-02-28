@@ -11,7 +11,7 @@
 <h2>runing the website localy</h2>
 <p>Clone the repository and run <code>npm install</code> to install the dependencies.</p>
 <p>run <code>npm start</code> to run the website localy.</p>
-</ul>
+
 
 <h2>Contributing</h2>
 
